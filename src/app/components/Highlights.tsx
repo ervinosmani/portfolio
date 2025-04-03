@@ -7,7 +7,7 @@ const highlights = [
   {
     icon: <FaGraduationCap className="text-3xl text-orange-500" />,
     title: "Education",
-    description: "Currently pursuing a Bachelor's degree in Computer Science at UBT, building a strong foundation in programming and software design."
+    description: "Currently pursuing a Bachelor&apos;s degree in Computer Science at UBT, building a strong foundation in programming and software design."
   },
   {
     icon: <FaChalkboardTeacher className="text-3xl text-orange-500" />,
