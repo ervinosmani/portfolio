@@ -27,7 +27,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-            Hello, I'm <span className="text-blue-400">Ervin Osmani</span>
+            Hello, I&apos;m <span className="text-blue-400">Ervin Osmani</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8">
             A Software Developer passionate about crafting performant, scalable and elegant web apps using cutting-edge technologies.

@@ -19,18 +19,18 @@ export default function About() {
             About <span className="text-blue-500">Me</span>
           </h2>
           <p className="text-gray-300 leading-relaxed mb-4">
-            I'm a Software Developer with a strong foundation in both front-end
+            I&apos;m a Software Developer with a strong foundation in both front-end
             and back-end technologies. I specialize in building responsive,
             interactive, and high-performance web applications using modern
             stacks like ReactJS, NextJS, and TypeScript.
           </p>
           <p className="text-gray-300 leading-relaxed mb-4">
             My backend experience includes Node.js, Express, Firebase, and
-            relational databases. I'm also confident in managing cloud services
+            relational databases. I&apos;m also confident in managing cloud services
             and deploying apps using tools like Vercel and Netlify.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            I'm constantly learning and evolving to stay ahead in the tech
+            I&apos;m constantly learning and evolving to stay ahead in the tech
             industry, with a passion for clean code, accessibility, and user
             experience.
           </p>

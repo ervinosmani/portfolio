@@ -51,7 +51,7 @@ export default function SkillsTabs() {
           My <span className="text-blue-500">Journey</span>
         </motion.h2>
 
-        {/* Butonat e Tabs me flex-wrap për t'u përshtatur në ekranet e vogla */}
+        {/* Butonat e Tabs me flex-wrap për t&apos;u përshtatur në ekranet e vogla */}
         <div className="flex flex-wrap justify-center gap-4 mb-6">
           {tabs.map((tab) => (
             <button
