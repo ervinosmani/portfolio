@@ -1,10 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function ContactSection() {
+  const [clicked, setClicked] = useState(false);
+
+  const handleLinkedInClick = () => {
+    setClicked(true);
+    setTimeout(() => setClicked(false), 1000); // kthehet pas 1 sekonde
+  };
+
   return (
-    <section className="bg-[#121212] text-white py-24 px-6">
+    <section className="bg-[#121212] text-white py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-12">
           Get in <span className="text-orange-500">Touch</span>
@@ -29,7 +37,9 @@ export default function ContactSection() {
         >
           <a
             href="mailto:ervinosmani3@gmail.com"
-            className="text-white bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold transition"
+            className="text-white bg-orange-500 hover:bg-orange-600 
+                      px-5 py-4 md:px-6 md:py-3 
+                      rounded-lg font-semibold transition duration-300"
           >
             Email Me
           </a>
@@ -37,7 +47,13 @@ export default function ContactSection() {
             href="https://www.linkedin.com/in/ervin-osmani-5880941bb"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white border border-gray-500 hover:bg-white hover:text-black px-6 py-3 rounded-lg font-semibold transition"
+            onClick={(e) => e.currentTarget.blur()}
+            className="text-white border border-gray-500 
+                      hover:bg-white hover:text-black 
+                      active:bg-white active:text-black 
+                      focus:bg-white focus:text-black 
+                      px-5 py-4 md:px-6 md:py-3 
+                      rounded-lg font-semibold transition duration-300"
           >
             Connect on LinkedIn
           </a>

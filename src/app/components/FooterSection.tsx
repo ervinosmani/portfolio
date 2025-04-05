@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function FooterSection() {
   return (
-    <footer className="bg-[#121212] text-white py-10 mt-12 border-t border-gray-800">
+    <footer className="bg-[#121212] text-white py-10 border-t border-gray-800">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-sm text-gray-400 mb-4">
           © {new Date().getFullYear()} Ervin Osmani. All rights reserved.
