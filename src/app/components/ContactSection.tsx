@@ -25,7 +25,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-lg md:text-xl text-gray-300 mb-10"
         >
-          Feel free to reach out for collaboration, inquiries, or just a chat about technology. Let&aposs build something great together!
+          Feel free to reach out for collaboration, inquiries, or just a chat about technology. Let&apos;s build something great together!
         </motion.div>
 
         <motion.div
@@ -47,7 +47,7 @@ export default function ContactSection() {
             href="https://www.linkedin.com/in/ervin-osmani-5880941bb"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.currentTarget.blur()}
+            onClick={handleLinkedInClick}
             className="text-white border border-gray-500 
                       hover:bg-white hover:text-black 
                       active:bg-white active:text-black 
