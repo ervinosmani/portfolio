@@ -10,7 +10,7 @@ export default function UpdatedAboutSection() {
     <section className="bg-[#121212] text-white py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Lottie animacioni në vend të fotos */}
+          {/* Lottie animacioni ne vend te fotos */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -49,7 +49,7 @@ export default function UpdatedAboutSection() {
           </motion.div>
         </div>
 
-        {/* Seksioni me tekst te thelluar mbi filozofinë tuaj */}
+        {/* Seksioni me tekst */}
         <div className="mt-16 text-center md:text-left">
           <motion.h3
             initial={{ opacity: 0, y: 30 }}
@@ -65,7 +65,7 @@ export default function UpdatedAboutSection() {
             transition={{ duration: 0.8 }}
             className="text-lg text-gray-300 leading-relaxed"
           >
-            I believe that web development is more than just writing code. It's about creating an impact on users' lives through seamless, high-performance web apps. I focus on building apps that provide great user experiences, while also paying attention to detail in every line of code.
+            I believe that web development is more than just writing code. It&aposs about creating an impact on users&apos lives through seamless, high-performance web apps. I focus on building apps that provide great user experiences, while also paying attention to detail in every line of code.
           </motion.p>
         </div>
       </div>

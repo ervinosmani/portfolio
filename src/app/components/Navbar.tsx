@@ -20,7 +20,7 @@ export default function Navbar() {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.35, // më i ndjeshëm tani për seksione më të ulëta
+      threshold: 0.35,
     };
   
     const newObservers: IntersectionObserver[] = [];

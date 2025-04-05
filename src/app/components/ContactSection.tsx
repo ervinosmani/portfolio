@@ -25,7 +25,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-lg md:text-xl text-gray-300 mb-10"
         >
-          Feel free to reach out for collaboration, inquiries, or just a chat about technology. Let’s build something great together!
+          Feel free to reach out for collaboration, inquiries, or just a chat about technology. Let&aposs build something great together!
         </motion.div>
 
         <motion.div
