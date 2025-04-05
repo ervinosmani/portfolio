@@ -1,16 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 export default function ContactSection() {
-  const [clicked, setClicked] = useState(false);
-
-  const handleLinkedInClick = () => {
-    setClicked(true);
-    setTimeout(() => setClicked(false), 1000); // kthehet pas 1 sekonde
-  };
-
   return (
     <section className="bg-[#121212] text-white py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
@@ -47,7 +39,6 @@ export default function ContactSection() {
             href="https://www.linkedin.com/in/ervin-osmani-5880941bb"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={handleLinkedInClick}
             className="text-white border border-gray-500 
                       hover:bg-white hover:text-black 
                       active:bg-white active:text-black 
