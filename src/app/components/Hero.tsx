@@ -61,7 +61,7 @@ export default function Hero() {
         className="mt-10 md:mt-0 md:ml-16 w-64 h-64 md:w-96 md:h-96 relative z-10 rounded-xl overflow-hidden shadow-xl"
       >
         <Image
-          src="/une.png"
+          src="/eo.png"
           alt="Ervin Osmani"
           fill
           className="object-cover"
