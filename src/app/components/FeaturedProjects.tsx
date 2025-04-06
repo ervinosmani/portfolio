@@ -22,12 +22,12 @@ const featured = [
     github: "https://github.com/ervinosmani/quote-generator",
   },
   {
-    title: "Next.js Portfolio",
+    title: "Portfolio",
     description: "Modern portfolio built with Next.js, showcasing skills and projects.",
     image: "/portfolio.png",
     tech: ["Next.js", "Tailwind CSS"],
-    live: "#",
-    github: "#",
+    live: "https://ervinosmani.vercel.app/",
+    github: "https://github.com/ervinosmani/portfolio",
   },
   {
     title: "Blogging Platform",
