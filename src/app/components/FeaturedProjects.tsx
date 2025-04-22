@@ -33,12 +33,11 @@ const featured = [
     title: "Blogging Platform",
     description:
       "A feature-rich blogging system built with Laravel and Vue 3, with authentication, categories, and markdown editor.",
-    image: "/blog.png",
+    image: "/blogproject1.png",
     tech: ["Laravel", "Vue 3", "MySQL", "Tailwind CSS"],
     live: "", // offline
     github: "https://github.com/ervinosmani/blogging-platform",
     previewImages: [
-      "/blogproject1.png",
       "/blogproject2.png",
       "/blogproject3.png",
       "/blogproject4.png",
