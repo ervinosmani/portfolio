@@ -38,9 +38,15 @@ const featured = [
     live: "", // offline
     github: "https://github.com/ervinosmani/blogging-platform",
     previewImages: [
-      "/blog.png",
-      "/blog.png",
-      "/blog.png",
+      "/blogproject1.png",
+      "/blogproject2.png",
+      "/blogproject3.png",
+      "/blogproject4.png",
+      "/blogproject5.png",
+      "/blogproject6.png",
+      "/blogproject7.png",
+      "/blogproject8.png",
+      "/blogproject9.png",
     ],
   },
 ];
