@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-black via-[#0f0f0f] to-gray-900 text-white flex flex-col md:flex-row items-center justify-center px-6 relative overflow-hidden">
+    <section className="pt-20 md:pt-24 min-h-screen bg-gradient-to-br from-black via-[#0f0f0f] to-gray-900 text-white flex flex-col md:flex-row items-center justify-center px-6 relative overflow-hidden">
       {/* Background Animation Circle */}
       <div className="absolute top-[-120px] left-[-120px] w-[300px] h-[300px] rounded-full bg-orange-600 opacity-20 blur-[100px] z-0" />
 
