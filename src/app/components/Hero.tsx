@@ -16,9 +16,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-extrabold mb-4"
+          className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight"
         >
-          Hi, I&apos;m Ervin — I design and build modern web applications.
+          Hi, I&apos;m <span className="text-orange-500">Ervin</span> — I design and build modern web applications.
         </motion.h1>
 
         <motion.p
@@ -58,11 +58,11 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
-        className="mt-10 md:mt-0 md:ml-16 w-64 h-64 md:w-96 md:h-96 relative z-10 rounded-xl overflow-hidden shadow-xl"
+        className="mt-10 md:mt-0 md:ml-16 w-64 h-64 md:w-96 md:h-96 relative z-10 rounded-xl overflow-hidden shadow-xl border-2 border-orange-500"
       >
         <Image
           src="/eo.png"
-          alt="Ervin Osmani"
+          alt="Portrait of Ervin Osmani, fullstack web developer"
           fill
           className="object-cover"
         />
