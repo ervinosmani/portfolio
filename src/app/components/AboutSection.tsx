@@ -65,7 +65,7 @@ export default function UpdatedAboutSection() {
             transition={{ duration: 0.8 }}
             className="text-lg text-gray-300 leading-relaxed"
           >
-            I believe that web development is more than just writing code. It&aposs about creating an impact on users&apos lives through seamless, high-performance web apps. I focus on building apps that provide great user experiences, while also paying attention to detail in every line of code.
+            I believe that web development is more than just writing code. It's about creating an impact on users&apos lives through seamless, high-performance web apps. I focus on building apps that provide great user experiences, while also paying attention to detail in every line of code.
           </motion.p>
         </div>
       </div>
