@@ -18,7 +18,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-6xl font-extrabold mb-4"
         >
-          Let’s Build Something <span className="text-orange-500">Modern</span>
+          Hi, I&apos;m Ervin — I design and build modern web applications.
         </motion.h1>
 
         <motion.p
@@ -27,7 +27,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-300 mb-8"
         >
-          I’m Ervin, a developer passionate about building beautiful and performant web apps.
+          An aspiring fullstack developer passionate about learning and building user-friendly web experiences through clean design and thoughtful code.
         </motion.p>
 
         {/* CTA Buttons */}
