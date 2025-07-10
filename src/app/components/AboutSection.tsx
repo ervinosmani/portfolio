@@ -31,21 +31,21 @@ export default function UpdatedAboutSection() {
               A Little <span className="text-orange-500">About Me</span>
             </h2>
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6"
-            >
-              Hi, I’m Ervin, a passionate Fullstack Developer with experience in creating scalable and user-friendly web applications. Currently, I’m pursuing my Bachelor’s in Computer Science while developing projects using modern technologies like React, Vue, and Laravel.
-            </motion.p>
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6"
+>
+  Hi, I’m Ervin — a junior fullstack developer who loves turning ideas into simple and useful web apps. I enjoy crafting clean layouts, writing readable code, and constantly learning new techniques to improve.
+</motion.p>
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6"
-            >
-              I believe in writing clean code and creating intuitive user experiences. I’m always striving to improve my skills and solve real-world challenges through my work.
-            </motion.p>
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6"
+>
+  My focus is on creating intuitive user interfaces and fast experiences that feel natural to use. Every project I work on is a step toward building better, smarter digital tools that make a difference.
+</motion.p> 
           </motion.div>
         </div>
 
