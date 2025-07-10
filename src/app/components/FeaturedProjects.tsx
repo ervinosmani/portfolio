@@ -6,28 +6,20 @@ import Image from "next/image";
 
 const featured = [
   {
-    title: "Vue Job Finder",
-    description: "Job search platform built with Vue 3 and Firebase for real-time job listings and Tailwind CSS for styling.",
-    image: "/job-finder.png",
-    tech: ["Vue 3", "Firebase", "Tailwind CSS"],
-    live: "https://vue-job-finder.netlify.app",
-    github: "https://github.com/ervinosmani/vue-job-finder",
-  },
-  {
-    title: "Quote Generator",
-    description: "Simple web app that displays random motivational quotes with HTML, CSS, and JavaScript.",
-    image: "/quote.jpg",
-    tech: ["HTML", "CSS", "JavaScript"],
-    live: "https://ervinosmani.github.io/quote-generator",
-    github: "https://github.com/ervinosmani/quote-generator",
-  },
-  {
     title: "Portfolio",
     description: "Personal portfolio website built with Next.js and Tailwind CSS to showcase skills and projects.",
     image: "/portfolio.png",
     tech: ["Next.js", "Tailwind CSS"],
     live: "https://ervinosmani.vercel.app/",
     github: "https://github.com/ervinosmani/portfolio",
+  },
+  {
+    title: "Vue Job Finder",
+    description: "Job search platform built with Vue 3 and Firebase for real-time job listings and Tailwind CSS for styling.",
+    image: "/job-finder.png",
+    tech: ["Vue 3", "Firebase", "Tailwind CSS"],
+    live: "https://vue-job-finder.netlify.app",
+    github: "https://github.com/ervinosmani/vue-job-finder",
   },
   {
     title: "Blogging Platform",
@@ -88,12 +80,12 @@ export default function FeaturedProjects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#1E1E1E] border border-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+              className="bg-[#1E1E1E] border border-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-orange-500/20 transition h-full flex flex-col"
             >
-              <div className="relative h-52">
+              <div className="relative aspect-[4/3]">
                 <Image src={proj.image} alt={proj.title} fill className="object-cover" />
               </div>
-              <div className="p-5">
+              <div className="p-5 flex flex-col gap-4 h-full">
                 <h3 className="text-xl font-semibold mb-2">{proj.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{proj.description}</p>
                 <div className="flex flex-wrap gap-2 text-xs mb-4">
@@ -106,7 +98,7 @@ export default function FeaturedProjects() {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4 text-sm font-medium flex-wrap">
+                <div className="flex gap-4 text-sm font-medium flex-wrap mt-auto">
                   {proj.live ? (
                     <a
                       href={proj.live}
@@ -114,17 +106,19 @@ export default function FeaturedProjects() {
                       rel="noopener noreferrer"
                       className="text-orange-500 hover:underline"
                     >
-                      Live
+                      Live Demo
                     </a>
                   ) : proj.previewImages ? (
                     <button
                       onClick={() => openModal(proj.previewImages!)}
-                      className="text-orange-500 hover:underline cursor-pointer"
+                      className="text-orange-500 hover:underline cursor-pointer relative group"
                     >
                       Offline Preview
-                    </button>
+                      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        Click to see screenshots
+                      </span>
+                  </button>
                   ) : null}
-
                   <a
                     href={proj.github}
                     target="_blank"
