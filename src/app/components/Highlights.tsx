@@ -14,30 +14,31 @@ const highlights = [
     icon: <FaGraduationCap className="text-3xl text-orange-500" />,
     title: "Education",
     description:
-      "Currently pursuing a Bachelor's degree in Computer Science at UBT, building a strong foundation in programming and software design.",
+      "Built a solid foundation in software development through ongoing studies in Computer Science at UBT, with focus on problem-solving, data structures, and clean code principles.",
   },
   {
     icon: <FaChalkboardTeacher className="text-3xl text-orange-500" />,
     title: "Assistant Instructor",
-    description: "Completed a practical role at Digital School, assisting in teaching front-end and web development to students.",
-  },    
+    description:
+      "Participated as an assistant instructor at Digital School, supporting front-end and web development sessions for students through practical guidance and mentoring.",
+  },
   {
     icon: <FaUserTie className="text-3xl text-orange-500" />,
     title: "Certification",
     description:
-      "Successfully completed a 1-year fullstack program at Probit Academy and received a professional certification in React, Laravel, and API development.",
+      "Completed a 1-year Fullstack Development program at Probit Academy with a professional certification in React, Laravel, REST APIs, and application architecture.",
   },
   {
     icon: <FaBriefcase className="text-3xl text-orange-500" />,
     title: "Starlabs Internship",
     description:
-      "Completed a 3-month web development internship at Starlabs, working on real-world applications with modern technologies.",
+      "Completed a 3-month web development internship at Starlabs, contributing to real projects and gaining hands-on experience in a professional environment.",
   },
   {
     icon: <FaHandsHelping className="text-3xl text-orange-500" />,
-    title: "Volunteering",
+    title: "Community Engagement",
     description:
-      "Actively involved in tech communities, helping others grow and contribute in open-source projects.",
+      "Participated in tech-related online communities and events, focused on learning collaboratively and sharing web development experiences.",
   },
 ];
 
