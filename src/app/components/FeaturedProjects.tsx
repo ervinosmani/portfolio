@@ -7,7 +7,7 @@ import Image from "next/image";
 const featured = [
   {
     title: "Vue Job Finder",
-    description: "Job search web app built with Vue 3, Firebase, and Tailwind CSS.",
+    description: "Job search platform built with Vue 3 and Firebase for real-time job listings and Tailwind CSS for styling.",
     image: "/job-finder.png",
     tech: ["Vue 3", "Firebase", "Tailwind CSS"],
     live: "https://vue-job-finder.netlify.app",
@@ -15,7 +15,7 @@ const featured = [
   },
   {
     title: "Quote Generator",
-    description: "App that fetches and displays random motivational quotes.",
+    description: "Simple web app that displays random motivational quotes with HTML, CSS, and JavaScript.",
     image: "/quote.jpg",
     tech: ["HTML", "CSS", "JavaScript"],
     live: "https://ervinosmani.github.io/quote-generator",
@@ -23,7 +23,7 @@ const featured = [
   },
   {
     title: "Portfolio",
-    description: "Modern portfolio built with Next.js, showcasing skills and projects.",
+    description: "Personal portfolio website built with Next.js and Tailwind CSS to showcase skills and projects.",
     image: "/portfolio.png",
     tech: ["Next.js", "Tailwind CSS"],
     live: "https://ervinosmani.vercel.app/",
@@ -32,7 +32,7 @@ const featured = [
   {
     title: "Blogging Platform",
     description:
-      "A feature-rich blogging system built with Laravel and Vue 3, with authentication, categories, and markdown editor.",
+      "A feature-rich blogging platform built with Laravel and Vue 3. Includes user authentication, post categories, and a markdown editor.",
     image: "/blogproject1.png",
     tech: ["Laravel", "Vue 3", "MySQL", "Tailwind CSS"],
     live: "", // offline
