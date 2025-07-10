@@ -13,7 +13,6 @@ export default function Navbar() {
   const observersRef = useRef<IntersectionObserver[]>([]);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
   const closeMenu = () => setIsOpen(false);
 
   useEffect(() => {
@@ -22,9 +21,9 @@ export default function Navbar() {
       rootMargin: "0px",
       threshold: 0.35,
     };
-  
+
     const newObservers: IntersectionObserver[] = [];
-  
+
     sections.forEach((id) => {
       const section = document.getElementById(id);
       if (section) {
@@ -35,18 +34,18 @@ export default function Navbar() {
             }
           });
         }, options);
-  
+
         observer.observe(section);
         newObservers.push(observer);
       }
     });
-  
+
     observersRef.current = newObservers;
-  
+
     return () => {
       observersRef.current.forEach((observer) => observer.disconnect());
     };
-  }, []);  
+  }, []);
 
   const navLinks = [
     { label: "About", href: "#about" },
@@ -56,60 +55,70 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#0f0f0f] text-white shadow-sm h-16">
-    <div className="max-w-6xl mx-auto px-6 flex justify-between items-center h-16">
-        <span className="text-orange-500 text-3xl font-bold">&lt;/&gt;</span>
+      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center h-16">
+        <span className="text-orange-500 text-3xl font-bold hover:scale-110 transition-transform duration-300">
+          &lt;/&gt;
+        </span>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-8 text-sm font-medium">
-        {navLinks.map((link) => (
+          {navLinks.map((link) => (
             <a
-            key={link.href}
-            href={link.href}
-            className={`transition-colors text-lg font-medium ${
+              key={link.href}
+              href={link.href}
+              aria-current={
+                activeSection === link.href.substring(1) ? "page" : undefined
+              }
+              className={`transition-colors text-lg font-medium ${
                 activeSection === link.href.substring(1)
-                ? "text-orange-500"
-                : "text-white hover:text-orange-500"
-            }`}
+                  ? "text-orange-500"
+                  : "text-white hover:text-orange-500"
+              }`}
             >
-            {link.label}
+              {link.label}
             </a>
-        ))}
+          ))}
         </nav>
 
         {/* Mobile Button */}
         <div className="md:hidden">
-        <button onClick={toggleMenu} aria-label="Toggle menu">
+          <button
+            onClick={toggleMenu}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-        </button>
+          </button>
         </div>
-    </div>
+      </div>
 
-    {/* Mobile Menu */}
-    {/* Mobile Menu */}
-{isOpen && (
-  <motion.div
-    initial={{ opacity: 0, y: -10 }}
-    animate={{ opacity: 1, y: 0 }}
-    className="md:hidden bg-[#121212] px-6 pb-4 pt-4"
-  >
-    <nav className="flex flex-col space-y-4">
-      {navLinks.map((link) => (
-        <a
-          key={link.href}
-          href={link.href}
-          onClick={closeMenu}
-          className={`transition-colors text-lg font-medium ${
-            activeSection === link.href.substring(1)
-              ? "text-orange-500"
-              : "text-white hover:text-orange-500"
-          }`}
+      {/* Mobile Menu */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="md:hidden bg-[#121212] px-6 pb-4 pt-4"
         >
-          {link.label}
-        </a>
-      ))}
-    </nav>
-  </motion.div>
-)}
+          <nav className="flex flex-col space-y-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={closeMenu}
+                aria-current={
+                  activeSection === link.href.substring(1) ? "page" : undefined
+                }
+                className={`transition-colors text-lg font-medium ${
+                  activeSection === link.href.substring(1)
+                    ? "text-orange-500"
+                    : "text-white hover:text-orange-500"
+                }`}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </motion.div>
+      )}
     </header>
   );
 }
