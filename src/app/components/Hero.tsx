@@ -44,7 +44,7 @@ export default function Hero() {
             My Projects
           </Link>
           <a
-            href="/Ervin_Osmani_CV_EN.pdf"
+            href="/Ervin_Osmani_Resume.pdf"
             download
             className="border border-gray-500 hover:bg-white hover:text-black px-6 py-3 rounded-lg font-semibold text-white transition-all transform hover:scale-105"
           >
