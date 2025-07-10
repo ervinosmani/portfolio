@@ -24,7 +24,7 @@ export default function Technologies() {
     <section className="bg-[#121212] py-20 px-6 text-white">
       <div className="max-w-6xl mx-auto">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center mb-12"
+          className="text-3xl md:text-4xl font-bold text-center mb-4"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -32,11 +32,21 @@ export default function Technologies() {
           Tech <span className="text-orange-500">Stack</span>
         </motion.h2>
 
+        {/* Paragraf informues */}
+        <motion.p
+          className="text-gray-400 text-center text-base md:text-lg mb-12 max-w-3xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
+          These are the technologies and tools I regularly use to build modern, scalable, and responsive web applications.
+        </motion.p>
+
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {techStack.map((tech, index) => (
             <motion.div
               key={index}
-              className="bg-[#1E1E1E] rounded-xl p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 transition-transform"
+              className="bg-[#1E1E1E] rounded-xl p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 hover:bg-orange-500/10 transition-all duration-300 cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
