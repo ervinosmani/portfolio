@@ -7,7 +7,7 @@ export default function FooterSection() {
     <footer className="bg-[#121212] text-white py-10 border-t border-gray-800">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-sm text-gray-300 mb-6">
-          I'm currently open to new opportunities — whether it's a full-time role, internship, or freelance collaboration.  
+          I’m currently open to new opportunities — whether it’s a full-time role, internship, or freelance collaboration.  
           Feel free to reach out!
         </p>
 
