@@ -58,10 +58,10 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
-        className="mt-10 md:mt-0 md:ml-16 w-64 h-64 md:w-96 md:h-96 relative z-10 rounded-xl overflow-hidden shadow-xl border-2"
+        className="mt-10 md:mt-0 md:ml-16 w-64 h-64 md:w-96 md:h-96 relative z-10 rounded-xl overflow-hidden shadow-xl"
       >
         <Image
-          src="/eo.png"
+          src="/E.O.jpg"
           alt="Portrait of Ervin Osmani, fullstack web developer"
           fill
           className="object-cover"
