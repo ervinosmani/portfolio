@@ -43,7 +43,7 @@ export default function FooterSection() {
         </div>
 
         <p className="text-sm text-gray-400 mb-1">
-          Built with passion and caffeine ☕ — thank you for visiting!
+          Built with passion and caffeine — thank you for visiting!
         </p>
         <p className="text-sm text-gray-500">
           © {new Date().getFullYear()} Ervin Osmani. All rights reserved.
