@@ -1,0 +1,213 @@
+
+/* Project media frames for the editorial portfolio */
+
+.frame {
+  width: min(100%, 620px);
+  margin: 48px auto 28px;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(27, 35, 40, .22);
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 13px 15px 0 #1b2328;
+}
+
+.browserBar {
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 15px;
+  background: #f3f4f0;
+  border-bottom: 1px solid #dae0da;
+  color: #596568;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.dots {
+  display: flex;
+  gap: 5px;
+  flex: none;
+}
+
+.dots i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f16a4e;
+}
+
+.dots i:nth-child(2) {
+  background: #ecbd68;
+}
+
+.dots i:nth-child(3) {
+  background: #7ac597;
+}
+
+.browserName {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.browserIcon {
+  color: #3043df;
+  font-size: 15px;
+}
+
+.viewport {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  aspect-ratio: 1.72 / 1;
+  background: #e6f0e9;
+}
+
+.image {
+  z-index: 1;
+  object-fit: contain;
+  object-position: center top;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.imageReady {
+  opacity: 1;
+}
+
+.confora .image {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(20px, 5vw, 45px);
+  background: linear-gradient(
+    140deg,
+    #f5fcf7,
+    #d9e7e0
+  );
+  color: #1b2328;
+  transition: opacity .2s ease;
+}
+
+.fallback small {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .13em;
+  color: #486f63;
+}
+
+.fallback strong {
+  max-width: 490px;
+  font-size: clamp(25px, 4vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -.06em;
+  margin: 18px 0;
+}
+
+.fallback span {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.confora .fallback {
+  background: linear-gradient(
+    130deg,
+    #25343b,
+    #111a21
+  );
+  color: #fff;
+}
+
+.confora .fallback small,
+.confora .fallback span {
+  color: #f0a08b;
+}
+
+.fallbackHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.caption {
+  padding: 9px 14px 10px;
+  border-top: 1px solid #d8e1dc;
+  font-size: 10px;
+  font-weight: 700;
+  color: #506066;
+  letter-spacing: .025em;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .frame {
+    width: min(90%, 620px);
+  }
+}
+
+@media (max-width: 600px) {
+  .frame {
+    margin: 48px auto 29px;
+    width: calc(100% - 15px);
+    border-radius: 6px;
+    box-shadow: 7px 8px 0 #1b2328;
+  }
+
+  .browserBar {
+    height: 31px;
+    padding-inline: 10px;
+    font-size: 10px;
+  }
+
+  .dots i {
+    width: 6px;
+    height: 6px;
+  }
+
+  .fallback small,
+  .fallback span {
+    font-size: 8px;
+  }
+
+  .caption {
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image,
+  .fallback {
+    transition: none;
+  }
+}
+
+
+/* Match the Vue Job Finder screenshot proportions. */
+
+.jobfinder .viewport {
+  aspect-ratio: 2.12 / 1;
+  background: #10151e;
+}
+
+.jobfinder .image {
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 600px) {
+  .jobfinder .viewport {
+    aspect-ratio: 2.12 / 1;
+  }
+}
