@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Portfolio",
+  metadataBase: new URL("https://ervinosmani.vercel.app"),
+  title: "Ervin Osmani | Software Developer",
+  description: "Software development portfolio.",
 };
 
 export default function RootLayout({
