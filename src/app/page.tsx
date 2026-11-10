@@ -1,41 +1,50 @@
-"use client";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Technologies from "./components/Technologies";
-import Highlights from "./components/Highlights";
-import FeaturedProjects from "./components/FeaturedProjects";
-import AboutSection from "./components/AboutSection";
-import ContactSection from "./components/ContactSection";
-import FooterSection from "./components/FooterSection";
-import BackToTopButton from "./components/BackToTopButton";
+import type { Metadata } from "next";
+import EditorialShell from "./editorial/EditorialShell";
+import EditorialPreview from "./redesign/page";
+
+const siteUrl = "https://ervinosmani.vercel.app";
+
+const description =
+  "Explore the portfolio of Ervin Osmani, a software developer building web applications, backend APIs and practical automation solutions.";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+
+  title: "Ervin Osmani | Software Developer",
+
+  description,
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "Ervin Osmani | Software Developer",
+    description,
+    url: siteUrl,
+    siteName: "Ervin Osmani",
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Ervin Osmani | Software Developer",
+    description,
+    images: [`${siteUrl}/opengraph-image`],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function HomePage() {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-
-      {/* About Section */}
-      <section id="about">
-        <AboutSection />
-      </section>
-
-      <Technologies />
-      <Highlights />
-
-      {/* Projects Section */}
-      <section id="projects"> 
-        <FeaturedProjects />
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact">
-        <ContactSection />
-      </section>
-
-      <FooterSection />
-      <BackToTopButton />
-    </main>
+    <EditorialShell>
+      <EditorialPreview />
+    </EditorialShell>
   );
 }

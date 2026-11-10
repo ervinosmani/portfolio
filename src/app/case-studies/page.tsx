@@ -8,9 +8,19 @@ export const metadata: Metadata = {
   title: "Engineering Case Studies | Ervin Osmani",
   description:
     "Explore the technical decisions, implementations and workflows behind selected web development projects by Ervin Osmani.",
+  alternates: {
+    canonical: "https://ervinosmani.vercel.app/case-studies",
+  },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Engineering Case Studies | Ervin Osmani",
+    description:
+      "Explore the implementation and technical decisions behind selected web development projects.",
+    url: "https://ervinosmani.vercel.app/case-studies",
+    type: "website",
   },
 };
 
@@ -320,7 +330,7 @@ export default function CaseStudiesPage() {
         <div className={styles.headerInner}>
           <Link
             className={styles.identity}
-            href="/redesign"
+            href="/"
             aria-label="Return to Ervin Osmani's portfolio"
           >
             <span className={styles.identityMark}>
@@ -352,7 +362,7 @@ export default function CaseStudiesPage() {
 
           <Link
             className={styles.backButton}
-            href="/redesign#projects"
+            href="/#projects"
           >
             Back to portfolio ↗
           </Link>
@@ -605,7 +615,7 @@ export default function CaseStudiesPage() {
           </small>
 
           <nav aria-label="Footer navigation">
-            <Link href="/redesign">
+            <Link href="/">
               Portfolio ↗
             </Link>
 

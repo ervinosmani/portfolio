@@ -145,7 +145,7 @@ export default function EditorialNavigation() {
         <a href="#vue-job-finder">Job Finder</a>
         <a href="#confora">Confora</a>
 
-        <Link href="/redesign#projects">
+        <Link href="/#projects">
           Portfolio ↗
         </Link>
       </nav>
