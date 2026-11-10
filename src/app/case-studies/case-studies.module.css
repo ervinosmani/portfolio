@@ -1076,3 +1076,73 @@
     transition: none;
   }
 }
+
+/* Case Studies - Contact arrow animation */
+
+.contact .shell > div > a[aria-label="Email Ervin Osmani"] > span {
+  display: inline-block;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.contact .shell > div > a[aria-label="Email Ervin Osmani"]:hover > span,
+.contact .shell > div > a[aria-label="Email Ervin Osmani"]:focus-visible > span {
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact .shell > div > a[aria-label="Email Ervin Osmani"] > span {
+    transition: none;
+  }
+}
+
+
+/* Case Studies — contact arrow hover animation */
+
+.contact .shell > div a[aria-label="Email Ervin Osmani"] {
+  position: relative;
+  color: transparent;
+}
+
+.contact .shell > div a[aria-label="Email Ervin Osmani"]::after {
+  content: "\2197";
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  color: #ffffff;
+  font-size: 63px;
+  line-height: 1;
+
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+
+  pointer-events: none;
+}
+
+.contact .shell > div a[aria-label="Email Ervin Osmani"]:hover::after,
+.contact .shell > div a[aria-label="Email Ervin Osmani"]:focus-visible::after {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 600px) {
+  .contact .shell > div a[aria-label="Email Ervin Osmani"]::after {
+    font-size: 43px;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact .shell > div a[aria-label="Email Ervin Osmani"]::after {
+    font-size: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact .shell > div a[aria-label="Email Ervin Osmani"]::after {
+    transition: none;
+  }
+}
