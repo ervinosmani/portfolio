@@ -347,6 +347,7 @@ export default function CaseStudiesPage() {
             className={styles.navigation}
             aria-label="Case studies navigation"
           >
+            <a href="#commerceops">CommerceOps</a>
             <a href="#blogging-platform">
               Blogging
             </a>
@@ -400,7 +401,7 @@ export default function CaseStudiesPage() {
               aria-hidden="true"
             >
               <small>THE WORK</small>
-              <strong>03</strong>
+              <strong>04</strong>
               <span>PROJECT CASE STUDIES</span>
               <b>↗</b>
             </div>
@@ -411,9 +412,41 @@ export default function CaseStudiesPage() {
               BUILT. EXPLAINED. REVIEWED.
             </span>
 
-            <a href="#blogging-platform">
+            <a href="#commerceops">
               Explore the cases ↓
             </a>
+          </div>
+        </section>
+
+                {/* FEATURED ENGINEERING PROJECT */}
+        <section
+          id="commerceops"
+          className={styles.commerceFeatured}
+          aria-labelledby="commerceops-featured-title"
+        >
+          <div className={styles.shell}>
+            <div className={styles.studyTop}>
+              <span>FEATURED ENGINEERING PROJECT / 2026</span>
+              <span>JAVA / SPRING BOOT / REACT</span>
+            </div>
+            <div className={styles.commerceFeaturedHeading}>
+              <div>
+                <p className={styles.eyebrow}>MULTI-TENANT / BUSINESS OPERATIONS</p>
+                <h2 id="commerceops-featured-title">
+                  COMMERCE<em>OPS.</em>
+                </h2>
+              </div>
+              <p>
+                A locally demonstrated B2B engineering MVP for inventory, warehouses,
+                transactional order reservations and organization-level authorization.
+              </p>
+            </div>
+            <div className={styles.commerceFeaturedBottom}>
+              <span>REAL APPLICATION SCREENSHOTS · TESTED LOCALLY · CI VERIFIED</span>
+              <Link href="/case-studies/commerceops">
+                Read the engineering case study ↗
+              </Link>
+            </div>
           </div>
         </section>
 
