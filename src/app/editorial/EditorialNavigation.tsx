@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect } from "react";
@@ -141,10 +140,9 @@ export default function EditorialNavigation() {
         className={styles.mobileIndex}
         aria-label="Case study shortcuts"
       >
-        <a href="#blogging-platform">Blogging</a>
-        <a href="#vue-job-finder">Job Finder</a>
-        <a href="#confora">Confora</a>
-
+        <a href="#aurelia">Aurelia</a>
+        <a href="#commerceops">CommerceOps</a>
+        <a href="#blogging-platform">Other work</a>
         <Link href="/#projects">
           Portfolio ↗
         </Link>

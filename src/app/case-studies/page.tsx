@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ProjectMedia from "../redesign/ProjectMedia";
 import styles from "./case-studies.module.css";
+import AureliaTeaser from "../components/AureliaTeaser";
 
 export const metadata: Metadata = {
   title: "Engineering Case Studies | Ervin Osmani",
@@ -347,6 +348,7 @@ export default function CaseStudiesPage() {
             className={styles.navigation}
             aria-label="Case studies navigation"
           >
+            <a href="#aurelia">Aurelia</a>
             <a href="#commerceops">CommerceOps</a>
             <a href="#blogging-platform">
               Blogging
@@ -401,7 +403,7 @@ export default function CaseStudiesPage() {
               aria-hidden="true"
             >
               <small>THE WORK</small>
-              <strong>04</strong>
+              <strong>05</strong>
               <span>PROJECT CASE STUDIES</span>
               <b>↗</b>
             </div>
@@ -412,11 +414,13 @@ export default function CaseStudiesPage() {
               BUILT. EXPLAINED. REVIEWED.
             </span>
 
-            <a href="#commerceops">
+            <a href="#aurelia">
               Explore the cases ↓
             </a>
           </div>
         </section>
+
+                <AureliaTeaser context="index" />
 
                 {/* FEATURED ENGINEERING PROJECT */}
         <section

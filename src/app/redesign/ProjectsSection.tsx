@@ -2,6 +2,7 @@
 import Link from "next/link";
 import ProjectMedia from "./ProjectMedia";
 import styles from "./redesign.module.css";
+import AureliaTeaser from "../components/AureliaTeaser";
 
 type Project = {
   id: "blogging" | "jobfinder" | "python" | "confora";
@@ -169,6 +170,8 @@ export default function ProjectsSection() {
           </strong>
         </p>
       </div>
+
+      <AureliaTeaser context="home" />
 
       <div className={styles.workList}>
         {projects.map((project) => (
