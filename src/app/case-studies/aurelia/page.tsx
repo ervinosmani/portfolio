@@ -102,7 +102,7 @@ export default function AureliaCaseStudyPage() {
               <div className={styles.heroIntro}>
                 <span>THE PROJECT</span>
                 <p>A personal finance workspace designed to make everyday decisions easier — and engineered to keep financial records consistent and private.</p>
-                <a href="#product">Explore the case study <span aria-hidden="true">↓</span></a>
+                <div className={styles.heroLinks}><a href="#product">Explore the case study <span aria-hidden="true">↓</span></a><a href="https://github.com/ervinosmani/aurelia-finance-showcase" target="_blank" rel="noopener noreferrer" aria-label="View curated Aurelia source on GitHub (opens in a new tab)">View source on GitHub <span aria-hidden="true">↗</span></a></div>
               </div>
             </div>
             <div className={styles.heroBottom}><span>PRODUCT DESIGN</span><span>FINANCIAL DOMAIN LOGIC</span><span>PRIVACY & OWNERSHIP</span></div>
@@ -170,7 +170,7 @@ export default function AureliaCaseStudyPage() {
               <article><span>RECOVERY</span><h3>Test the return path.</h3><p>A synthetic PostgreSQL backup was restored to a separate local database, with financial records and RLS checked afterward.</p></article>
             </div>
             <p className={styles.evidenceFinePrint}>Locally recorded evidence: 168 passing Vitest tests and 14 passing Playwright checks at the V2.8 milestone (21 November 2026), plus TypeScript, ESLint and production build checks. These are internal engineering checks, not an independent audit or production availability claim.</p>
-            <div className={styles.currentStatus}><span>THE CURRENT BOUNDARY</span><p>Aurelia remains a private application. It is not a hosted financial service, public demo or banking product. The isolated recovery rehearsal did not cover complete provider-managed Supabase Auth restoration, and hosted release checks have not been completed.</p></div>
+            <div className={styles.currentStatus}><span>THE CURRENT BOUNDARY</span><p>Aurelia remains a private application. A curated source snapshot is publicly available for engineering review, without personal financial records or the original private Git history. It is not a hosted financial service, public demo or banking product. The isolated recovery rehearsal did not cover complete provider-managed Supabase Auth restoration, and hosted release checks have not been completed.</p></div>
           </div>
         </section>
       </main>
