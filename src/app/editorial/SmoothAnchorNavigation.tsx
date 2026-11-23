@@ -92,14 +92,14 @@ export default function SmoothAnchorNavigation() {
       });
     };
 
-    const onHistory = () => {
-      if (window.location.hash && window.location.hash !== "#main") scrollToFragment(window.location.hash, false);
-      else cancel();
-    };
+    // History traversal is not an explicit anchor click. Leave scroll position
+    // restoration to the browser/Next.js instead of animating toward a hash.
+    const onHistory = () => cancel();
 
     document.documentElement.setAttribute("data-smooth-anchors", "ready");
     document.addEventListener("click", onClick);
     window.addEventListener("popstate", onHistory);
+    window.addEventListener("pagehide", cancel);
     window.addEventListener("wheel", cancel, { passive: true });
     window.addEventListener("touchstart", cancel, { passive: true });
     window.addEventListener("pointerdown", cancel, { passive: true });
@@ -110,6 +110,7 @@ export default function SmoothAnchorNavigation() {
       cancel();
       document.removeEventListener("click", onClick);
       window.removeEventListener("popstate", onHistory);
+      window.removeEventListener("pagehide", cancel);
       window.removeEventListener("wheel", cancel);
       window.removeEventListener("touchstart", cancel);
       window.removeEventListener("pointerdown", cancel);

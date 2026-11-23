@@ -106,7 +106,13 @@ export default function WorkPage() {
                     <p className={styles.mediaNote}>{project.imageDisclosure ?? "Illustration only · Private workflow details withheld"}</p>
                     <div className={styles.archiveDetail}>
                       <strong>{project.status}</strong>
-                      <p>{registered?.limitation ?? (project.id === "confora" ? "Public transport website preview. Exact contribution and permission remain to be confirmed before final publication." : "Private scripting and workflow exploration. No confidential workflows, code or client data are disclosed.")}</p>
+                      {registered && (
+                        <dl className={styles.archiveFacts}>
+                          <div><dt>Built with</dt><dd>{registered.technologies.join(" · ")}</dd></div>
+                          <div><dt>Engineering scope</dt><dd>{registered.contribution}</dd></div>
+                        </dl>
+                      )}
+                      <p>{registered?.limitation ?? (project.id === "confora" ? "The public website can be inspected. Exact contribution and permission remain to be confirmed before final publication." : "Private scripting and workflow exploration. No confidential source, workflow configuration or client data are disclosed.")}</p>
                     </div>
                     <div className={styles.archiveActions}>
                       {project.id === "confora" && <a href="https://confora.netlify.app/en" target="_blank" rel="noopener noreferrer">Public website preview (new tab) ↗</a>}

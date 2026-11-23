@@ -28,7 +28,7 @@ export default function ResumePage() {
         <div className={styles.pageContent} id="career-content">
           <div className={styles.documentMeta}>
             <span>CAREER PROFILE / ENGINEERING EVIDENCE</span>
-            <span>FACTUAL PREVIEW / CV APPROVAL PENDING</span>
+            <span>PROFESSIONAL EXPERIENCE / SELECTED WORK</span>
           </div>
 
           <header className={styles.hero}>
@@ -52,7 +52,7 @@ export default function ResumePage() {
               <p>01 / PROFESSIONAL EXPERIENCE</p>
               <h2 id="experience-title">Building, learning, <em>supporting others.</em></h2>
             </div>
-            <p className={styles.chronologyNote}>The responsibilities below reflect confirmed work. Exact employment dates have not yet been verified, so no calendar chronology is implied.</p>
+            <p className={styles.chronologyNote}>Experience is presented by role and scope. Dates are omitted where a precise timeline has not been confirmed.</p>
             <div className={styles.careerList}>
               {profile.experience.map((item, index) => (
                 <article key={item.organization} className={styles.careerItem} data-career-type="experience">
@@ -149,18 +149,16 @@ export default function ResumePage() {
 
           <section className={styles.reviewNote} aria-labelledby="document-title">
             <div>
-              <p className={styles.eyebrow}>APPLICATION DOCUMENTS / PRIVATE REVIEW</p>
-              <h2 id="document-title">The application CV is awaiting final approval.</h2>
+              <p className={styles.eyebrow}>CAREER / CONTACT</p>
+              <h2 id="document-title">Interested in working together?</h2>
               <p>
-                Work dates, formal degree-award status, exact certificate details and the
-                final document copy remain under review. This page presents selected
-                career facts and engineering evidence, not a finalized application resume.
-                No unapproved PDF or DOCX is available for download.
+                This page brings together my experience, technical focus and selected engineering
+                work. For a current application CV or to discuss a project, get in touch directly.
               </p>
             </div>
-            <a href={`mailto:${profile.email}?subject=Resume%20enquiry`}>Request current details <span aria-hidden="true">↗</span></a>
+            <a href={`mailto:${profile.email}?subject=Resume%20enquiry`}>Request my CV <span aria-hidden="true">↗</span></a>
           </section>
-          <p className={styles.printHint}>For personal reference, use your browser&apos;s Print command. Official ATS and branded documents will be available only after owner approval.</p>
+          <p className={styles.printHint}>A printable version is available through your browser. Please contact me for a current application CV.</p>
         </div>
       </main>
       <div className={styles.chrome}><StudioFooter /></div>

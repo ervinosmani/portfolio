@@ -82,3 +82,10 @@
 .archiveImage { height:240px; } }
 @media(max-width:370px) { .wrap { width:calc(100% - 32px); } .aureliaDiagram,.imageFrame { height:230px; } .flowGraphic { gap:8px; } .flowGraphic span { padding:10px 11px; font-size:11px; } }
 @media(prefers-reduced-motion:reduce) { .page *, .page *::before,.page *::after { scroll-behavior:auto!important; transition:none!important; animation:none!important; } }
+
+/* Career edition: readable scope and stack details for supporting work. */
+.archiveFacts { display: grid; gap: 12px; margin: 14px 0 0; }
+.archiveFacts > div { display: grid; grid-template-columns: 112px minmax(0,1fr); gap: 12px; }
+.archiveFacts dt { color: #a9c9ce; font-size: 12px; font-weight: 750; }
+.archiveFacts dd { margin: 0; color: #f0f6f5; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
+@media (max-width: 390px) { .archiveFacts > div { grid-template-columns: 1fr; gap: 4px; } }

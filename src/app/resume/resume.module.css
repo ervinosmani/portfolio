@@ -123,3 +123,136 @@
 /* RESET-04: visual hint is redundant in the narrow 2-column contact grid;
    the anchor retains the new-tab announcement in its accessible name. */
 @media (max-width:390px) { .contacts .externalHint { display:none; } }
+
+
+/* Career Edition / visual alignment: a darker editorial opening with a calm CV reading surface.
+   Scope is screen only. The print stylesheet above remains unchanged. */
+@media screen {
+  .main {
+    --career-night: #07111b;
+    --career-surface: #102430;
+    --career-mint: #9df3da;
+    --career-rule: #c9d6d5;
+    background: #f7f6f2;
+  }
+  .pageContent { width: min(1240px, calc(100% - 88px)); padding-bottom: clamp(68px, 8vw, 114px); }
+  .documentMeta { border-bottom-color: #bccac9; color: #465a64; padding-block: 25px; letter-spacing: .15em; }
+  .hero {
+    position: relative;
+    margin-top: 24px;
+    padding: clamp(48px, 6.4vw, 88px) clamp(25px, 4.9vw, 68px);
+    min-height: 370px;
+    align-items: end;
+    gap: clamp(28px, 5vw, 64px);
+    border: 1px solid rgba(157,243,218,.25);
+    border-radius: 14px;
+    isolation: isolate;
+    background: radial-gradient(ellipse 75% 90% at 90% 10%, rgba(31,119,127,.28), transparent 70%), linear-gradient(135deg,#07111b 5%,#102430 100%);
+    color: #f2f8f7;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -98px;
+    top: -138px;
+    width: min(37vw, 470px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(157,243,218,.13);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  .hero .eyebrow { color: var(--career-mint); letter-spacing: .17em; }
+  .hero h1 { font-size: clamp(54px, 7.3vw, 104px); color: #f6fbfa; }
+  .hero .accent { color: var(--career-mint); }
+  .hero .role { color: #f0f8f5; line-height: 1.45; }
+  .hero .role span { color: #9bd5cd; }
+  .heroSummary { color: #ccdadc; font-size: clamp(15px, 1.38vw, 18px); line-height: 1.72; }
+  .contacts {
+    margin-top: 0;
+    padding: 22px clamp(22px, 4.3vw, 55px);
+    border: 1px solid #b9d5cf;
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+    background: #e1f4eb;
+    gap: 10px;
+  }
+  .contacts a {
+    background: #f7fcf8;
+    color: #0d2b2d;
+    border-color: #9fbfb5;
+    border-radius: 5px;
+    transition: background-color 180ms ease, border-color 180ms ease;
+  }
+  .contacts a:hover { background: #ccf6e5; border-color: #287b68; }
+  .section { padding-top: clamp(80px, 8vw, 124px); }
+  .sectionHeading { border-bottom-color: #aabdbb; }
+  .sectionHeading > p { color: #146558; letter-spacing: .15em; }
+  .sectionHeading h2 { color: #10232d; }
+  .sectionHeading em { color: #176d61; font-family: Georgia, serif; font-weight: 400; font-style: italic; }
+  .careerList { border-top-color: #b6c9c4; }
+  .careerItem, .featuredItem { border-bottom-color: #bdcfcb; }
+  .careerIndex, .itemNumber { color: #176d61; }
+  .careerOrganization, .itemContent .projectCategory { color: #176d61; }
+  .itemContent h3 a:hover { color: #146a5e; }
+  .featuredItem {
+    margin-top: 18px;
+    padding: clamp(26px, 3vw, 44px);
+    border: 1px solid #c5d9d4;
+    border-radius: 12px;
+    background: linear-gradient(142deg, #f0f8f2, #eaf3f0 65%, #f7f6f2);
+    grid-template-columns: minmax(58px,.32fr) minmax(0,1.68fr);
+    box-shadow: 0 12px 38px rgba(13,45,44,.035);
+  }
+  .itemContent dt { color: #173d3a; }
+  .projectLinks a { color: #135f54; }
+  .additionalGrid { gap: 17px; }
+  .additionalProject {
+    border-color: rgba(157,243,218,.24);
+    border-radius: 12px;
+    background: linear-gradient(145deg, #112b35, #0a1b28);
+    color: #eef8f6;
+    padding: clamp(24px, 3vw, 35px);
+  }
+  .additionalProject h3 { color: #f0faf8; }
+  .additionalProject p { color: #cbdde0; }
+  .additionalProject span { color: #b8d5d4; }
+  .additionalProject a { color: var(--career-mint); }
+  .skills { padding-top: 30px; }
+  .skillGroup { padding-top: 21px; border-top: 2px solid #8eaea7; }
+  .skillGroup h3 { color: #173d3a; }
+  .reviewNote {
+    border: 1px solid rgba(157,243,218,.23);
+    border-radius: 14px;
+    background: radial-gradient(ellipse at 90% 15%, rgba(35,143,137,.24),transparent 65%), #0c202c;
+  }
+  .reviewNote a { border-radius: 5px; background: var(--career-mint); }
+  .main a:focus-visible { outline-color: #176d61; }
+  .hero a:focus-visible, .reviewNote a:focus-visible { outline-color: #c9ffd2; }
+}
+@media screen and (max-width: 900px) {
+  .pageContent { width: calc(100% - 48px); }
+  .hero { grid-template-columns: 1fr; min-height: 0; gap: 32px; }
+  .heroSummary { max-width: 670px; }
+}
+@media screen and (max-width: 760px) {
+  .pageContent { width: calc(100% - 40px); }
+  .documentMeta { gap: 14px; }
+  .hero { margin-top: 16px; padding: 44px 25px 42px; border-radius: 10px; }
+  .hero h1 { font-size: clamp(45px, 10vw, 78px); }
+  .contacts { padding: 17px 16px; }
+  .featuredItem { grid-template-columns: 1fr; gap: 14px; }
+  .section { padding-top: 76px; }
+}
+@media screen and (max-width: 390px) {
+  .pageContent { width: calc(100% - 32px); }
+  .hero { padding: 36px 19px; }
+  .hero h1 { font-size: clamp(43px, 11.5vw, 57px); }
+  .contacts { padding: 14px 12px; }
+  .contacts a { flex-basis: 124px; }
+  .featuredItem { padding: 23px 18px; }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .contacts a { transition: none; }
+}
