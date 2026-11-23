@@ -1,21 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import SignatureCursor from "./editorial/SignatureCursor";
+import SmoothAnchorNavigation from "./editorial/SmoothAnchorNavigation";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bodyFont = DM_Sans({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-editorial-body",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const displayFont = Space_Grotesk({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-editorial-heading",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ervinosmani.vercel.app"),
   title: "Ervin Osmani | Software Developer",
-  description: "Software development portfolio.",
+  description:
+    "Selected software engineering work, technical case studies, and professional experience.",
 };
 
 export default function RootLayout({
@@ -25,9 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${bodyFont.variable} ${displayFont.variable}`}>
+        <SmoothAnchorNavigation />
+        <SignatureCursor />
         {children}
       </body>
     </html>

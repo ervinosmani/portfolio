@@ -1,0 +1,51 @@
+/* A subtle mint halo that follows the pointer, not an interactive control. */
+.cursor {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 120;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid rgba(155, 253, 223, 0.88);
+  border-radius: 50%;
+  background: rgba(107, 237, 209, 0.055);
+  box-shadow: 0 0 0 1px rgba(8, 42, 47, 0.25), 0 0 19px rgba(128, 255, 225, 0.18);
+  color: #b3ffec;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  contain: layout style;
+  transition: width 210ms cubic-bezier(.22,1,.36,1),
+    height 210ms cubic-bezier(.22,1,.36,1),
+    opacity 130ms ease, background 210ms ease, border-color 210ms ease;
+}
+.cursor[data-visible="true"] { opacity: .94; }
+.cursor[data-interactive="true"] {
+  width: 51px;
+  height: 51px;
+  background: rgba(112, 243, 210, .17);
+  border-color: #b5ffe7;
+}
+.cursor[data-pressed="true"] { width: 24px; height: 24px; }
+.cursor[data-has-label="true"] { width: 81px; height: 81px; background: rgba(9, 47, 55, .92); }
+.core {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #c7fff0;
+  box-shadow: 0 0 9px rgba(177, 255, 231, .7);
+}
+.cursor[data-has-label="true"] .core { display: none; }
+.label {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: .07em;
+  color: #d7fff1;
+}
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .cursor { display: none !important; }
+}

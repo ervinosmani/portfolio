@@ -1,35 +1,14 @@
-
-/*
- * Editorial typography system
- *
- * Shared by /redesign and /case-studies.
- * Does not modify the original homepage.
- */
-
 .scope {
-  --editorial-body:
-    var(--font-editorial-body),
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  --editorial-display:
-    var(--font-editorial-heading),
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  --editorial-body: var(--font-body);
+  --editorial-display: var(--font-display);
   width: 100%;
   min-width: 0;
+  font-family: var(--editorial-body);
 }
-
-/* Override the existing Arial font on the page root. */
 
 .scope > div {
   font-family: var(--editorial-body);
 }
-
-/* Consistent display typography across both routes. */
 
 .scope > div h1,
 .scope > div h2,
@@ -38,8 +17,6 @@
   font-family: var(--editorial-display);
 }
 
-/* Form controls follow the body typography. */
-
 .scope > div button,
 .scope > div input,
 .scope > div textarea,
@@ -47,13 +24,9 @@
   font-family: var(--editorial-body);
 }
 
-/* Preserve keyboard accessibility. */
-
 .scope :focus-visible {
   outline-offset: 4px;
 }
-
-/* Respect reduced-motion settings. */
 
 @media (prefers-reduced-motion: reduce) {
   .scope *,

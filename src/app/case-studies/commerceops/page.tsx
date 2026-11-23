@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import StudioHeader from "../../editorial/StudioHeader";
+import StudioFooter from "../../editorial/StudioFooter";
 import styles from "./commerceops.module.css";
 
 const baseUrl = "https://ervinosmani.vercel.app";
@@ -78,17 +80,18 @@ export default function CommerceOpsCaseStudyPage() {
   return (
     <div className={styles.site} id="top">
       <a className={styles.skipLink} href="#main">Skip to content</a>
-      <header className={styles.header}>
-        <div className={styles.headerInner}>
-          <Link className={styles.brand} href="/">EO<span>↗</span> <small>Engineering case study</small></Link>
-          <nav aria-label="CommerceOps navigation">
+      <StudioHeader />
+      <nav className={styles.contextNav} aria-label="CommerceOps case study sections">
+        <div className={styles.contextInner}>
+          <span className={styles.contextLabel}>COMMERCEOPS / CASE STUDY</span>
+          <div className={styles.contextLinks}>
             <a href="#architecture">Architecture</a>
             <a href="#product">Product</a>
             <a href="#evidence">Evidence</a>
-          </nav>
-          <Link className={styles.back} href="/case-studies">All case studies ↗</Link>
+          </div>
+          <Link href="/case-studies" className={styles.contextBack}>All work ↗</Link>
         </div>
-      </header>
+      </nav>
       <main id="main" tabIndex={-1}>
         <section className={styles.hero} aria-labelledby="commerceops-title">
           <div className={styles.shell}>
@@ -153,7 +156,7 @@ export default function CommerceOpsCaseStudyPage() {
               {shots.map((shot, index) => (
                 <figure key={shot.file} className={styles.shot}>
                   <div className={styles.shotHeading}><h3><span>{String(index + 1).padStart(2, '0')} /</span> {shot.title}</h3><p>{shot.caption}</p></div>
-                  <a href={`/projects/commerceops/${shot.file}`} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size screenshot: ${shot.title}`}>
+                  <a href={`/projects/commerceops/${shot.file}`} target="_blank" rel="noopener noreferrer" aria-label={`View full screenshot: ${shot.title} (opens in a new tab)`}>
                     <Image src={`/projects/commerceops/${shot.file}`} alt={shot.alt} width={1400} height={750} sizes="(max-width: 768px) 100vw, 1100px" />
                     <span className={styles.openImage}>View full screenshot ↗</span>
                   </a>
@@ -184,9 +187,7 @@ export default function CommerceOpsCaseStudyPage() {
           </div>
         </section>
       </main>
-      <footer className={styles.footer}>
-        <div className={styles.shell}><Link href="/case-studies">← All case studies</Link><a href="#top">Back to top ↑</a></div>
-      </footer>
+      <StudioFooter />
     </div>
   );
 }

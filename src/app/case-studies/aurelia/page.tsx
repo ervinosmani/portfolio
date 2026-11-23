@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AureliaInterfaceIllustration from "../../components/AureliaInterfaceIllustration";
+import StudioHeader from "../../editorial/StudioHeader";
+import StudioFooter from "../../editorial/StudioFooter";
 import styles from "./aurelia.module.css";
 
 const canonical = "https://ervinosmani.vercel.app/case-studies/aurelia";
@@ -81,15 +83,18 @@ export default function AureliaCaseStudyPage() {
   return (
     <div className={styles.page} id="top">
       <a href="#main" className={styles.skipLink}>Skip to content</a>
-      <header className={styles.header}>
-        <div className={styles.container}>
-          <Link href="/" className={styles.wordmark} aria-label="Return to portfolio"><span>eo<span>↗</span></span><small>SELECTED WORK</small></Link>
-          <nav aria-label="Aurelia case study navigation">
-            <a href="#product">Product</a><a href="#engineering">Engineering</a><a href="#review">Review</a>
-          </nav>
-          <Link className={styles.headerBack} href="/case-studies">All case studies ↗</Link>
+      <StudioHeader />
+      <nav className={styles.contextNav} aria-label="Aurelia case study sections">
+        <div className={styles.contextInner}>
+          <span className={styles.contextLabel}>AURELIA / CASE STUDY</span>
+          <div className={styles.contextLinks}>
+            <a href="#product">Product</a>
+            <a href="#engineering">Engineering</a>
+            <a href="#review">Review</a>
+          </div>
+          <Link href="/case-studies" className={styles.contextBack}>All work ↗</Link>
         </div>
-      </header>
+      </nav>
       <main id="main" tabIndex={-1}>
         <section className={styles.hero} aria-labelledby="aurelia-title">
           <div className={styles.container}>
@@ -102,7 +107,7 @@ export default function AureliaCaseStudyPage() {
               <div className={styles.heroIntro}>
                 <span>THE PROJECT</span>
                 <p>A personal finance workspace designed to make everyday decisions easier — and engineered to keep financial records consistent and private.</p>
-                <div className={styles.heroLinks}><a href="#product">Explore the case study <span aria-hidden="true">↓</span></a><a href="https://github.com/ervinosmani/aurelia-finance-showcase" target="_blank" rel="noopener noreferrer" aria-label="View curated Aurelia source on GitHub (opens in a new tab)">View source on GitHub <span aria-hidden="true">↗</span></a></div>
+                <div className={styles.heroLinks}><a href="#product">Explore the case study <span aria-hidden="true">↓</span></a><a href="https://github.com/ervinosmani/aurelia-finance-showcase" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub (opens in a new tab)">View source on GitHub <span aria-hidden="true">↗</span></a></div>
               </div>
             </div>
             <div className={styles.heroBottom}><span>PRODUCT DESIGN</span><span>FINANCIAL DOMAIN LOGIC</span><span>PRIVACY & OWNERSHIP</span></div>
@@ -174,7 +179,7 @@ export default function AureliaCaseStudyPage() {
           </div>
         </section>
       </main>
-      <footer className={styles.footer}><div className={styles.container}><div><strong>aurelia<span>.</span></strong><p>A private product. An open engineering story.</p></div><nav aria-label="Case study footer"><Link href="/case-studies">← All case studies</Link><Link href="/">Portfolio ↗</Link><a href="#top">Back to top ↑</a></nav></div></footer>
+      <StudioFooter />
     </div>
   );
 }

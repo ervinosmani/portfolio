@@ -1,0 +1,32 @@
+name: Portfolio quality
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Run all regression tests
+        run: npm test
+      - name: Strict TypeScript check
+        run: npx tsc --noEmit
+      - name: Lint source, QA scripts and tests
+        run: npm run lint
+      - name: Production build
+        run: npm run build

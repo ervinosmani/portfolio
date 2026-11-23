@@ -1,41 +1,93 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --canvas: #f7f6f2;
+  --ink: #18232b;
+  --muted: #4b5960;
+  --accent: #3043df;
+  --accent-on: #ffffff;
+  --dark: #101b23;
+  --dark-text: #f5f7f3;
+  --mint: #b7e7cd;
+  --border: #ccd2d0;
+  --font-body: var(--font-editorial-body), Arial, Helvetica, sans-serif;
+  --font-display: var(--font-editorial-heading), Arial, Helvetica, sans-serif;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --page-gutter: clamp(20px, 4.2vw, 64px);
+  --content-max: 1280px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-fast: 160ms;
+  --motion-standard: 240ms;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-background: var(--canvas);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-body);
 }
 
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  min-width: 320px;
+  background: var(--canvas);
+  /* The optional scroll enhancement controls duration; native scrolling is the fallback. */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-  position: relative;
+  min-width: 320px;
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
 
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--mint);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+
+/* Keep deep links visible below sticky navigation, even without JavaScript. */
+section[id], main[id], article[id] { scroll-margin-top: 92px; }
+@media (max-width: 600px) {
+  section[id], main[id], article[id] { scroll-margin-top: 76px; }
+}
+
+/* Native pointer remains the fallback; enhancement activates only on a fine mouse. */
+html[data-signature-cursor="active"],
+html[data-signature-cursor="active"] body,
+html[data-signature-cursor="active"] a,
+html[data-signature-cursor="active"] button,
+html[data-signature-cursor="active"] [role="button"] {
+  cursor: none !important;
+}
+html[data-signature-cursor="active"] :is(input, textarea, select, [contenteditable="true"]) {
+  cursor: text !important;
+}
